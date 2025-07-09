@@ -1,0 +1,25 @@
+services:
+  snell-server:
+    build:
+      context: .
+      args:
+        SNELL_VERSION: v5.0.0b3
+    container_name: snell-server
+    ports:
+      - "6160:6160"
+    volumes:
+      - ./snell-server.conf:/etc/snell-server.conf:ro
+    command: snell-server -c /etc/snell-server.conf
+    restart: unless-stopped
+    networks:
+      - snell-network
+    healthcheck:
+      test: ["CMD-SHELL", "netstat -tuln | grep :6160 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+networks:
+  snell-network:
+    driver: bridge

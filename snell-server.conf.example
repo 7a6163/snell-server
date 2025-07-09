@@ -1,0 +1,16 @@
+[snell-server]
+# Listen address and port
+listen = 0.0.0.0:6160
+
+# Pre-shared key for authentication
+# Generate a strong random key: openssl rand -base64 32
+psk = your-pre-shared-key-here
+
+# Obfuscation method: http, tls, or off
+obfs = http
+
+# Optional: IPv6 support
+# ipv6 = true
+
+# Optional: DNS server
+# dns = 8.8.8.8, 8.8.4.4
