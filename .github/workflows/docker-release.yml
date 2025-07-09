@@ -94,7 +94,7 @@ jobs:
 
       - name: Build and push to Docker Hub by digest
         id: build-dockerhub
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           context: .
           platforms: ${{ matrix.platform }}
@@ -107,7 +107,7 @@ jobs:
 
       - name: Build and push to GitHub Container Registry by digest
         id: build-ghcr
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           context: .
           platforms: ${{ matrix.platform }}
