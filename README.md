@@ -32,26 +32,26 @@ Use the automated setup script:
 #### Docker Hub
 ```bash
 # Pull from Docker Hub
-docker pull 7a6163/snell-server:latest
+docker pull <your-dockerhub-username>/snell-server:latest
 
 # Run with configuration
 docker run -d --name snell-server \
   -p 6160:6160 \
   -v ./snell-server.conf:/etc/snell-server.conf:ro \
-  7a6163/snell-server:latest \
+  <your-dockerhub-username>/snell-server:latest \
   snell-server -c /etc/snell-server.conf
 ```
 
 #### GitHub Container Registry
 ```bash
 # Pull from GitHub Container Registry
-docker pull ghcr.io/7a6163/snell-server:latest
+docker pull ghcr.io/<your-github-username>/snell-server:latest
 
 # Run with configuration
 docker run -d --name snell-server \
   -p 6160:6160 \
   -v ./snell-server.conf:/etc/snell-server.conf:ro \
-  ghcr.io/7a6163/snell-server:latest \
+  ghcr.io/<your-github-username>/snell-server:latest \
   snell-server -c /etc/snell-server.conf
 ```
 
