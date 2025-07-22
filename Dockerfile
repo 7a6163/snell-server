@@ -27,5 +27,5 @@ RUN apt-get update && \
 
 # Use debian:stable-slim for better compatibility (no additional packages needed)
 FROM debian:stable-slim
-COPY --from=build snell-server /usr/local/bin/snell-server
+COPY --from=build /snell-server /usr/local/bin/snell-server
 ENTRYPOINT ["/usr/local/bin/snell-server"]
