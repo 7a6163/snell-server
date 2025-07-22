@@ -2,7 +2,7 @@ FROM debian:stable-slim AS build
 
 # Use build arguments for better flexibility
 ARG TARGETARCH
-ARG SNELL_VERSION=v5.0.0b3
+ARG SNELL_VERSION=v5.0.0
 
 # Map Docker platform to Snell architecture
 RUN apt-get update && \
