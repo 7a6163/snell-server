@@ -3,7 +3,7 @@ services:
     build:
       context: .
       args:
-        SNELL_VERSION: v5.0.0b3
+        SNELL_VERSION: v5.0.0
     container_name: snell-server
     ports:
       - "6160:6160"
